@@ -1,1 +1,1 @@
-# golang-larning-cases
+# golang-learning-cases
