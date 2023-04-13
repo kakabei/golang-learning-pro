@@ -30,8 +30,22 @@ func timestampDemo() {
 	fmt.Printf("current timestamp4:%v\n", timestamp4)
 }
 
+func testLocation() {
+	// 构建时区
+	var timeLocation *time.Location
+	timeLocation, _ = time.LoadLocation("") //UTC
+	fmt.Printf("current timeLocation:%v\n", timeLocation)
+	timeLocation, _ = time.LoadLocation("UTC") //UTC
+	fmt.Printf("current timeLocation:%v\n", timeLocation)
+	timeLocation, _ = time.LoadLocation("Local") //Local
+	fmt.Printf("current timeLocation:%v\n", timeLocation)
+	timeLocation, _ = time.LoadLocation("Asia/Shanghai") //使用时区码
+	fmt.Printf("current timeLocation:%v\n", timeLocation)
+}
+
 func main() {
 
 	// timeDemo()
-	timestampDemo()
+	// timestampDemo()
+	testLocation()
 }
