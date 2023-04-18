@@ -22,8 +22,8 @@ func (c *MainController) GetRoomId() {
 		RoomId: 12345,
 	}
 
-	dbMap, _ := config.GetSection("mysql")
-	Port := dbMap["mysql_port"]
+	dbMap, _ := config.GetSection("mysql1")
+	Port := dbMap["port"]
 	fmt.Printf("Port %v \n", Port)
 	fmt.Printf("req :%v, resp:%v \n", req, resp)
 
