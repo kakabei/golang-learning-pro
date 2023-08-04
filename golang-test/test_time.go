@@ -43,9 +43,26 @@ func testLocation() {
 	fmt.Printf("current timeLocation:%v\n", timeLocation)
 }
 
+func Weekday() {
+	// 获取当前时间
+	now := time.Now()
+
+	// 计算本周的开始时间
+	weekday := int(now.Weekday())
+	weekStart := now.AddDate(0, 0, -weekday)
+	weekStart1 := weekStart.Format("2006-01-02")
+	// 计算本周的结束时间
+	weekEnd := weekStart.AddDate(0, 0, 7)
+	weekEnd1 := weekEnd.Format("2006-01-02")
+	fmt.Println("Current Time:", now)
+	fmt.Println("Start of the Week:", weekStart1)
+	fmt.Println("End of the Week:", weekEnd1)
+}
+
 func main() {
 
 	// timeDemo()
 	// timestampDemo()
-	testLocation()
+	// testLocation()
+	Weekday()
 }
